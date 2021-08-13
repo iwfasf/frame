@@ -1,0 +1,1 @@
+const Sprite=(e,t=32)=>new Promise((a,i)=>{let r=new Image;r.onload=async()=>{let e=r.width/t,i=r.height,h=Element('canvas',0,{width:r.width,height:i}),n=[];h.getContext('2d').drawImage(r,0,0);for(let a=0;a<e;a++)n.push(createImageBitmap(h,a*t,0,t,i));let o=await Promise.all(n);o.w=t,o.h=i,a(o)},r.src=e,r.onerror=i});
